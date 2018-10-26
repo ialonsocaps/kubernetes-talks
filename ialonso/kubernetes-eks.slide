@@ -52,7 +52,6 @@ It has a large, rapidly growing ecosystem. Kubernetes services, support, and too
 
 Kubernetes builds upon a decade and a half of experience that Google has with running production workloads at scale, combined with best-of-breed ideas and practices from the community.
 
-
 * Kubernetes Architecture
 
 .image images/kubernetes-cluster.png 480 _
@@ -65,7 +64,6 @@ Kubernetes builds upon a decade and a half of experience that Google has with ru
 
 .caption Concepts Underlying the Cloud Controller Manager at [[https://kubernetes.io/docs/concepts/architecture/cloud-controller/][kubernetes,io]]
 
-
 * Kubernetes Components: Nodes (1)
 
 - *Container* *Runtime*
@@ -73,7 +71,6 @@ Kubernetes builds upon a decade and a half of experience that Google has with ru
 The container runtime is the software that is responsible for running containers.
 
 .image images/kubernetes-node.svg 340 _
-
 
 * Pods
 
@@ -89,7 +86,6 @@ The container runtime is the software that is responsible for running containers
 
 .image images/pods.svg 250 _
 
-
 * Pods - Single container deployment
 
 - Pods that run a single container.
@@ -101,7 +97,6 @@ You can think of a Pod as a wrapper around a single container, and Kubernetes ma
 .code yml/pod-single.yml
 .caption [[_yml/pod-single.yml_][yml/pod-single.yml]]
 
-
 * Pods - Multiple containers deployment (1)
 
 - Pods that run multiple containers that need to work together.
@@ -111,7 +106,6 @@ A Pod might encapsulate an application composed of multiple co-located container
 These co-located containers might form a single cohesive unit of service–one container serving files from a shared volume to the public, while a separate “*sidecar*” container refreshes or updates those files. 
 
 .image images/pod.svg 250 _
-
 
 * Pods - Network
 
@@ -125,7 +119,6 @@ These co-located containers might form a single cohesive unit of service–one c
 
 .image images/pods-network.png 250 _
 
-
 * Pods - Storage
 
 - Share storage -> can share data.
@@ -134,18 +127,15 @@ These co-located containers might form a single cohesive unit of service–one c
 
 .image images/pods-storage.png 250 _
 
-
 * Pods - Multiple containers deployment
 
 .code yml/pod-multi.yml
 .caption [[_yml/pod-multi.yml_][yml/pod-multi.yml]]
 
-
 * Pods - Lifecycle
 
 .image images/PodsLifeCycle.png 250 _
 .caption Pods status
-
 
 * Pods - Liveness Health check
 
@@ -157,7 +147,6 @@ These co-located containers might form a single cohesive unit of service–one c
 
 .code yml/pod-health-http-liveness.yml
 .caption [[_yml/pod-health-http-liveness.yml_][yml/pod-health-http-liveness.yml]]
-
 
 * Pods - Rediness Health check (1)
 
@@ -175,7 +164,6 @@ These co-located containers might form a single cohesive unit of service–one c
 .code yml/pod-health-cmd-readiness.yml
 .caption [[_yml/pod-health-cmd-readiness.yml_][yml/pod-health-cmd-readiness.yml]]
 
-
 * Pods - Health check use cases
 
 - If the process in your Container is able to crash on its own whenever it encounters an issue or becomes unhealthy; the *kubelet* will automatically perform the correct action in accordance with the Pod’s *restartPolicy*.
@@ -188,11 +176,6 @@ These co-located containers might form a single cohesive unit of service–one c
 
 - If you want your Container to be able to take itself down for maintenance, you can specify a *readiness* *probe* that checks an endpoint specific to readiness that is different from the liveness probe.
 
-
-
-
-#########################################
-#### Continue from here
 * Pods - Health checks (3)
 
 .code yml/pod-health-tcp-both.yml
