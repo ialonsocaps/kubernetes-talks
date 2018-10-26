@@ -1,6 +1,5 @@
 Kubernetes EKS
 Introduction to Kubernetes Architecture and Deployments
-2018-10-19
 
 Slides based on [[https://kubernetes.io/docs/home/?path=users&persona=app-developer&level=foundational][_Kubernetes_ _Documentation_]]
 Tags: kubernetes, docker, containers, microservices, eks, aws
@@ -134,7 +133,7 @@ These co-located containers might form a single cohesive unit of service–one c
 
 * Pods - Lifecycle
 
-.image images/PodsLifeCycle.png 250 _
+.image images/PodsLifeCycle.jpg 500 _
 .caption Pods status
 
 * Pods - Liveness Health check
