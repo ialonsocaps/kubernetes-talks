@@ -158,7 +158,6 @@ These co-located containers might form a single cohesive unit of service–one c
 
 - If a Container does not provide a readiness probe, the default state is *Success*.
 
-
 * Pods - Rediness Health check (2)
 
 .code yml/pod-health-cmd-readiness.yml
@@ -349,7 +348,6 @@ You can specify *maxUnavailable* (the maximum number of Pods that can be unavail
 .caption [[_yml/replicaset-hpa.yml_][yml/replicaset-hpa.yml]]
 
 * Extra Slide : Kubernetes Comic
-
 
 .image images/kubernetes-comic.png 500 _
 
